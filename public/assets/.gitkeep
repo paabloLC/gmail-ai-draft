@@ -1,0 +1,6 @@
+# Assets folder for social media images and other static resources
+# 
+# Expected files:
+# - og-image.png (1200x630px for Open Graph)
+# - twitter-card.png (1200x600px for Twitter Cards)
+# - logo variants and other brand assets
