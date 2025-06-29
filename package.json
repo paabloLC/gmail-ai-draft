@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "db:push": "dotenv -e .env.local -- prisma db push",
-    "db:generate": "dotenv -e .env.local -- prisma generate"
+    "db:generate": "dotenv -e .env.local -- prisma generate",
+    "postinstall": "prisma generate"
   },
   "repository": {
     "type": "git",
