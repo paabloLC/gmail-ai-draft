@@ -1,8 +1,10 @@
 import OpenAI from 'openai'
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-})
+const openai = process.env.OPENAI_API_KEY 
+  ? new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  : null
 
 export interface EmailContent {
   subject: string
@@ -29,6 +31,9 @@ export interface EmailResponse {
 export class OpenAIService {
   async classifyEmail(email: EmailContent): Promise<EmailClassification> {
     try {
+      if (!openai) {
+        throw new Error('OpenAI API key not configured')
+      }
       const prompt = `
 Analyze this email and classify it:
 
@@ -97,6 +102,9 @@ Respond only with valid JSON.`
     userName?: string
   ): Promise<EmailResponse> {
     try {
+      if (!openai) {
+        throw new Error('OpenAI API key not configured')
+      }
       // Build context from FAQs
       const faqContext = faqs && faqs.length > 0 
         ? `\n\nRelevant FAQs:\n${faqs.map(faq => `Q: ${faq.question}\nA: ${faq.answer}`).join('\n\n')}`
