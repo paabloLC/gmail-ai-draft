@@ -12,6 +12,7 @@ export default function Home() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
 
   if (status === "loading") {
     return (
@@ -145,6 +146,22 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Demo Mode Banner */}
+      {isDemoMode && (
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-amber-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div className="flex items-center justify-center text-xs sm:text-sm text-amber-800 text-center">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-medium">Showcase:</span>
+              <span className="ml-1 hidden sm:inline">This is a preview. Authentication and backend features are disabled.</span>
+              <span className="ml-1 sm:hidden">Preview mode. Authentication disabled.</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-20 lg:py-32 overflow-hidden">
