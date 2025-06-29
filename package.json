@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "prisma db push",
-    "db:generate": "prisma generate"
+    "db:push": "dotenv -e .env.local -- prisma db push",
+    "db:generate": "dotenv -e .env.local -- prisma generate"
   },
   "repository": {
     "type": "git",
@@ -47,5 +47,8 @@
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0"
   }
 }
