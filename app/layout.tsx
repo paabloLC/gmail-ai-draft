@@ -6,13 +6,13 @@ const overpass = Overpass({ subsets: ['latin'], weight: ['300', '400', '500', '6
 
 export const metadata: Metadata = {
   title: 'GmailDraft - AI Email Assistant',
-  description: 'AI-powered assistant that helps businesses respond to incoming emails automatically',
+  description: 'AI-powered assistant that helps you respond to incoming emails automatically',
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
     title: 'GmailDraft - AI Email Assistant',
-    description: 'AI-powered assistant that helps businesses respond to incoming emails automatically',
+    description: 'AI-powered assistant that helps you respond to incoming emails automatically',
     url: 'https://gmaildraft.com',
     siteName: 'GmailDraft',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'GmailDraft - AI Email Assistant',
-    description: 'AI-powered assistant that helps businesses respond to incoming emails automatically',
+    description: 'AI-powered assistant that helps you respond to incoming emails automatically',
     images: ['/assets/og-image.png'],
   },
 }

@@ -156,8 +156,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="font-medium">Showcase:</span>
-              <span className="ml-1 hidden sm:inline">This is a preview. Authentication and backend features are disabled.</span>
-              <span className="ml-1 sm:hidden">Preview mode. Authentication disabled.</span>
+              <span className="ml-1 hidden sm:inline">Take a look around! Auth and backend features are turned off.</span>
+              <span className="ml-1 sm:hidden">Explore mode. Authentication disabled.</span>
             </div>
           </div>
         </div>
@@ -614,8 +614,7 @@ export default function Home() {
             Ready to automate your inbox?
           </h2>
           <p className="text-base sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
-            Join thousands of professionals who trust AI to handle their email
-            responses
+            Start replying smarter. Save time with AI-crafted drafts,&nbsp;ready when you&nbsp;are
           </p>
           <div className="flex justify-center">
             <GetStartedButton
@@ -652,7 +651,7 @@ export default function Home() {
                 <span className="text-2xl font-bold">GmailDraft</span>
               </div>
               <p className="text-gray-300 max-w-md leading-relaxed">
-                AI-powered email assistant for modern professionals. Automate your inbox with intelligent draft responses powered by GPT-4.
+                Smart email assistant powered by GPT-4. Handles your inbox with intelligent draft replies.
               </p>
             </div>
 
