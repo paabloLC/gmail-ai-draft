@@ -156,8 +156,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="font-medium">Showcase:</span>
-              <span className="ml-1 hidden sm:inline">This is a preview. Authentication and backend features are disabled.</span>
-              <span className="ml-1 sm:hidden">Preview mode. Authentication disabled.</span>
+              <span className="ml-1 hidden sm:inline">Take a look around! Auth and backend features are turned off.</span>
+              <span className="ml-1 sm:hidden">Explore mode. Authentication disabled.</span>
             </div>
           </div>
         </div>
